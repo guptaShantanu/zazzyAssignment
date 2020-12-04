@@ -21,7 +21,7 @@ export class AppComponent {
     var box = document.getElementById('colorText')
     box.innerHTML = "";
     for (var word of words) {
-      if (word === 'the' || word === 'an' || word === 'a' || word === 'he' || word === 'she' || word === 'they') {
+      if (word === 'the' || word === 'an' || word === 'a' || word === 'he' || word === 'she' || word === 'they' || (word.charCodeAt(0) >= 65 && word.charCodeAt(0) <= 90)) {
         var boldText = document.createElement('strong');
         boldText.innerHTML = word;
         box.appendChild(boldText);
